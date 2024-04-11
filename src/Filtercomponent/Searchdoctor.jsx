@@ -8,6 +8,8 @@ const Searchdoctor = () => {
             <input type="text"/>
         </div>
 
+        
+
     </div>
   )
 }
