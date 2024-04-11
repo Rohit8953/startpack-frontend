@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from 'react-scroll';
 import {useNavigate} from 'react-router-dom'
+import {Link as RouterLink} from "react-router-dom"
 
 
 
@@ -17,12 +18,15 @@ const Navbar = () => {
         Logo
       </div>
       <div className="flex flex-row gap-5">
-        <Link activeClass="active" spy={false} smooth={true} to="doctor">
+      <RouterLink to="/">
+          <p className=" cursor-pointer ">Home</p>
+        </RouterLink>
+        <RouterLink to="/doctors">
           <p className=" cursor-pointer ">Find doctor</p>
-        </Link>
-        <Link activeClass="active" spy={false} smooth={true} to="medicine">
+        </RouterLink>
+        <RouterLink to={'/store'}>
           <p className=" cursor-pointer ">Medicine</p>
-        </Link>
+        </RouterLink>
         <Link activeClass="active" spy={false} smooth={true} to="tests">
           <p className=" cursor-pointer ">Lab test</p>
         </Link>
