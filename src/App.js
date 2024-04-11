@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Navbar from "./Mainpage/Navbar";
+// import Homeslider from "./Mainpage/Homeslider";
+import Home from "./Mainpage/Home";
+import{Routes,Route} from 'react-router-dom'
+import Medicalstore from "./Routerscompo/Medicalstore";
+import Testcard from "./Testandsurgery/Testcard";
+import Surgeryform from "./Testandsurgery/Surgeryform";
 
 function App() {
+
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+       <Navbar/>
+       
+       <Routes>
+        <Route path="/" element={<Home/>}/>
+        <Route path='store' element={<Medicalstore/>}/>
+        <Route path='test' element={<Testcard/>}/>
+        <Route path='surgery' element={<Surgeryform/>}/>
+        
+       </Routes> 
     </div>
   );
-}
-
+};
 export default App;
+
